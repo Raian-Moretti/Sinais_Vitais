@@ -35,6 +35,3 @@ print(predicted_target-validate)
 # Plota a árvore
 plot_tree(clf)
 plt.show()
-
-
-
