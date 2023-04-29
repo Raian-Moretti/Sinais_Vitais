@@ -3,7 +3,7 @@
 ## Executar
 1. Tenha `python3` e `pip3` instalado.
 2. `pip3 install -r requirements.txt`
-3. `python3 src/<algorithm>.py`
+3. `python3 main.py`
 
 ## Resultados Obtidos
 
