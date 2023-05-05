@@ -18,7 +18,7 @@ def forestClassifier():
 
     clf = RandomForestClassifier(n_estimators=n_estimators, criterion='gini', max_depth=3)
 
-    clf = clf.fit(x_train, y_train)
+    clf = clf.fit(x_train, y_train.values.ravel())
 
     predict = clf.predict(x_test)
 

@@ -12,7 +12,7 @@ def plot_options(clf,feature_cols, png_name, n_estimators=1):
         if(opt == 1):
             plot(clf,feature_cols, png_name, n_estimators)
         elif(opt == 2):
-            importance(clf)
+            importance(clf,png_name)
         elif(opt == 0):
             print("\n### Menu inicial ###")
         else:
