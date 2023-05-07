@@ -2,7 +2,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from utils.loadData import dataset
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-from utils.plot import confusion_matrix
+from utils.menu import plot_options
 
 def neuralClassifier():
     png_name = 'neuralClassifier'
@@ -33,5 +33,5 @@ def neuralClassifier():
     f1 = f1_score(y_test, predict, average=None)
     print("f1 score:", f1)
 
-    confusion_matrix(clf, x_test, y_test,png_name)
+    plot_options(clf, feature_cols, png_name, x_test, y_test, type='neural', classifier='true')
 

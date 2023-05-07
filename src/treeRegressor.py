@@ -14,7 +14,7 @@ def treeRegressor():
 
     x_train, x_test, y_train, y_test = train_test_split(features, target,  test_size=0.2, random_state=42)
 
-    reg = DecisionTreeRegressor(criterion='poisson', max_depth=10)
+    reg = DecisionTreeRegressor(criterion='poisson', max_depth=20)
 
     reg = reg.fit(x_train, y_train)
 
@@ -27,4 +27,4 @@ def treeRegressor():
     mse = mean_squared_error(y_test, predict)
     print("MSE:", mse)
     
-    plot_options(reg, feature_cols, png_name)
+    plot_options(reg, feature_cols, png_name, type='tree')

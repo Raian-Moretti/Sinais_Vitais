@@ -33,5 +33,5 @@ def treeClassifier():
     f1 = f1_score(y_test, predict, average=None)
     print("f1 score:", f1)
 
-    plot_options(clf, feature_cols, png_name)
+    plot_options(clf, feature_cols, png_name, x_test, y_test, type='tree', classifier='true')
 

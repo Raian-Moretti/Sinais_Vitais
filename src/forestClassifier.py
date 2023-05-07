@@ -36,5 +36,5 @@ def forestClassifier():
     f1 = f1_score(y_test, predict, average=None)
     print("f1 score:", f1)
 
-    plot_options(clf, feature_cols, png_name, n_estimators)
+    plot_options(clf, feature_cols, png_name, x_test, y_test, type='forest', classifier='true', n_estimators=n_estimators)
 

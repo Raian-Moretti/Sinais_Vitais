@@ -28,12 +28,16 @@ def importance(clf,png_name):
                     y=importances_df["importances"])
     g.set_title("Feature importances", fontsize=14) 
     plt.savefig(f'images/importance_{png_name}.png')
-    plt.show()
     plt.close()
 
 def confusion_matrix(clf, x_test, y_test,png_name):
     fig=ConfusionMatrixDisplay.from_estimator(clf, x_test, y_test,display_labels=["1","2","3","4"])
     fig.figure_.suptitle("Confusion Matrix")
     plt.savefig(f'images/confusion_matrix_{png_name}.png')
-    plt.show()
     plt.close()
+    
+def loss(mlp,png_name):
+    plt.plot(mlp.loss_curve_)
+    plt.title('Loss Curve')
+    plt.xlabel("Epochs")
+    plt.savefig(f"images/loss_curve_{png_name}.png")
