@@ -33,5 +33,5 @@ def forestRegressor():
     mse = mean_squared_error(y_test, predict)
     print("MSE:", mse)
 
-    plot_options(reg, feature_cols, png_name,  type='forest', classifier='false', n_estimators=n_estimators)
+    plot_options(reg, feature_cols, png_name,  type='forest', n_estimators=n_estimators)
 
