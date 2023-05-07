@@ -15,17 +15,14 @@ def forestRegressor():
     features = dataset[feature_cols]
     target = dataset[target_cols]
 
-    x_train, x_test, y_train, y_test = train_test_split(features, target,  test_size=0.2, random_state=42)
+    x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
 
     reg = RandomForestRegressor(n_estimators=n_estimators, criterion='poisson', max_depth=20)
 
     reg = reg.fit(x_train, y_train)
 
     predict = reg.predict(x_test)
-    print(predict)
-    
-    score = r2_score(y_test, predict)
-    print(score)    
+    print(predict)  
     
     score = r2_score(y_test, predict)
     print("r2 score", score)
