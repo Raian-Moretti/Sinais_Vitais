@@ -9,7 +9,7 @@ def plot_options(alg, feature_cols, png_name, x_test=None, y_test=None, type='',
         except ValueError:
             print("\nFavor digitar um número")
             continue
-        if(opt == 1 and (type=='tree' or type=='forest')):
+        if(opt == 1 and (type=='tree' or type=='forest') and classifier=='true'):
             plot(alg,feature_cols, png_name, n_estimators)
         elif(opt == 2 and (type=='tree' or type=='forest')):
             importance(alg,png_name)
